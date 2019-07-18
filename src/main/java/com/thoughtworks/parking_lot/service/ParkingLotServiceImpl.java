@@ -42,4 +42,9 @@ public class ParkingLotServiceImpl implements ParkingLotService{
         }
         return false;
     }
+
+    @Override
+    public ParkingLot findByName(String name) {
+        return this.parkingLotRepository.findByName(name);
+    }
 }

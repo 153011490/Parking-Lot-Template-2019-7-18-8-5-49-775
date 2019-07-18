@@ -29,4 +29,9 @@ public class parkingLotController {
        return parkingLotService.deleteParkingLot(name);
     }
 
+    @GetMapping("/{name}")
+    public ParkingLot getParkingLot(@PathVariable String name){
+        return parkingLotService.findByName(name);
+    }
+
 }

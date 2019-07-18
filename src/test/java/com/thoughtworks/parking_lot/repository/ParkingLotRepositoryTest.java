@@ -51,4 +51,14 @@ public class ParkingLotRepositoryTest {
         assertEquals(3,parkingLotList.size());
     }
 
+
+    @Test
+    public void should_return_info_when_call_get_parking_lot_given_name(){
+        parkingLotRepository.save(parkingLot);
+        ParkingLot actual = parkingLotRepository.findByName("oocl");
+        assertEquals("oocl",actual.getName());
+        assertEquals(10,actual.getCapacity());
+        assertEquals("zhuhai",actual.getLocation());
+    }
+
 }

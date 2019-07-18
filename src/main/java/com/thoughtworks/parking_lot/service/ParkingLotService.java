@@ -10,4 +10,6 @@ public interface ParkingLotService {
     List<ParkingLot> getAllParkingLot(int page,int pageSize);
 
     boolean deleteParkingLot(String name);
+
+    ParkingLot findByName(String name);
 }

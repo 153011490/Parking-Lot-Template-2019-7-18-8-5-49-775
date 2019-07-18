@@ -6,4 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ParkingLotRepository extends JpaRepository<ParkingLot,String> {
     public void deleteByName(String name);
+
+    ParkingLot findByName(String name);
 }
