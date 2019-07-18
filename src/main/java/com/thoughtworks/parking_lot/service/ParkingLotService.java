@@ -12,4 +12,6 @@ public interface ParkingLotService {
     boolean deleteParkingLot(String name);
 
     ParkingLot findByName(String name);
+
+    ParkingLot updateParkingLot(String name, int capacity);
 }

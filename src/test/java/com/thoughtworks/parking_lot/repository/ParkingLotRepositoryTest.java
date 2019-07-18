@@ -61,4 +61,16 @@ public class ParkingLotRepositoryTest {
         assertEquals("zhuhai",actual.getLocation());
     }
 
+
+    @Test
+    public void should_return_updated_capacity_when_call_update_parking_lot_given_name_capacity(){
+        parkingLotRepository.save(parkingLot);
+        String name="oocl";
+        int capacity=3;
+        ParkingLot actual = parkingLotRepository.findByName(name);
+        if(actual!=null)actual.setCapacity(capacity);
+        assertEquals(3,actual.getCapacity());
+    }
+
+
 }

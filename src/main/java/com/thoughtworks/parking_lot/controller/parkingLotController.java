@@ -34,4 +34,9 @@ public class parkingLotController {
         return parkingLotService.findByName(name);
     }
 
+    @PutMapping("/{name}")
+    public ParkingLot updateParkingLot(@PathVariable("name") String name,@RequestParam int capacity){
+       return parkingLotService.updateParkingLot(name,capacity);
+    }
+
 }

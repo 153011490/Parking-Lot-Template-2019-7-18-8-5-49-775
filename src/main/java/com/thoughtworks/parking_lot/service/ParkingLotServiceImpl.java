@@ -47,4 +47,11 @@ public class ParkingLotServiceImpl implements ParkingLotService{
     public ParkingLot findByName(String name) {
         return this.parkingLotRepository.findByName(name);
     }
+
+    @Override
+    public ParkingLot updateParkingLot(String name, int capacity) {
+        ParkingLot parkingLot=this.parkingLotRepository.findByName(name);
+        if(parkingLot!=null)return this.parkingLotRepository.save(parkingLot);
+        return null;
+    }
 }
