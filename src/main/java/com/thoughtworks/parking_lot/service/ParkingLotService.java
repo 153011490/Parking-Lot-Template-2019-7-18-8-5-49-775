@@ -8,4 +8,6 @@ public interface ParkingLotService {
     boolean addParkingLot(ParkingLot parkingLot);
 
     List<ParkingLot> getAllParkingLot();
+
+    boolean deleteParkingLot(String name);
 }

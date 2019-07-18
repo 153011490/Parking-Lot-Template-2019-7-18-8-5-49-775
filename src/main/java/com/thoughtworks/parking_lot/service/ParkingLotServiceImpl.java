@@ -28,4 +28,15 @@ public class ParkingLotServiceImpl implements ParkingLotService{
     public List<ParkingLot> getAllParkingLot() {
        return this.parkingLotRepository.findAll();
     }
+
+    @Override
+    public boolean deleteParkingLot(String name) {
+        try{
+            this.parkingLotRepository.deleteByName(name);
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

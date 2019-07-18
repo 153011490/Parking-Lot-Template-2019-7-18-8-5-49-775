@@ -29,4 +29,10 @@ public class ParkingLotRepositoryTest {
         assertEquals(1,parkingLotRepository.findAll().size());
     }
 
+    @Test
+    public void should_return_size_when_call_delete_parking_lot_given_name(){
+        parkingLotRepository.deleteByName("oocl");
+        assertEquals(0,parkingLotRepository.findAll().size());
+    }
+
 }

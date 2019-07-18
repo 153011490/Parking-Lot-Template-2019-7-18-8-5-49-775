@@ -24,4 +24,9 @@ public class parkingLotController {
         return parkingLotService.getAllParkingLot();
     }
 
+    @DeleteMapping("/{name}")
+    public boolean deleteParkingLot(@PathVariable String name){
+       return parkingLotService.deleteParkingLot(name);
+    }
+
 }
