@@ -20,8 +20,8 @@ public class parkingLotController {
     }
 
     @GetMapping
-    public List<ParkingLot> getAllParkingLot(){
-        return parkingLotService.getAllParkingLot();
+    public List<ParkingLot> getAllParkingLot(@RequestParam int page,@RequestParam(defaultValue = "15") int pageSize){
+        return parkingLotService.getAllParkingLot(page,pageSize);
     }
 
     @DeleteMapping("/{name}")

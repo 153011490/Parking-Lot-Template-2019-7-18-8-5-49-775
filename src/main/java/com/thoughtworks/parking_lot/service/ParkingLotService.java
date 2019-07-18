@@ -7,7 +7,7 @@ import java.util.List;
 public interface ParkingLotService {
     boolean addParkingLot(ParkingLot parkingLot);
 
-    List<ParkingLot> getAllParkingLot();
+    List<ParkingLot> getAllParkingLot(int page,int pageSize);
 
     boolean deleteParkingLot(String name);
 }
